@@ -2,10 +2,10 @@ package org.example;
 
 import java.util.*;
 import java.lang.*;
-//import static org.example.lesson6.Notebook.Filter.all;
+
 public class NoteCatalog {
     static Random randNumber = new Random();
-       static String[] arrRam = {"4", "8", "12", "16", "32"};
+    static String[] arrRam = {"4", "8", "12", "16", "32"};
     static String[] arrDrive = {"SSD", "HDD"};
     static String[] arrScreenSize = {"11.6", "13.0", "14.0", "15.6", "17.0"};
     static String[] arrBrand = {"Sony", "Lenovo", "Fujitsu", "HP", "Toshiba"};
