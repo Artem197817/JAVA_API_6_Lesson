@@ -25,10 +25,7 @@ public class NoteCatalog {
                     arrOs[randNumber.nextInt(scroll5)],
                     arrColor[randNumber.nextInt(scroll5)]));
         }
-        System.out.println("Ноутбуки в наличии: ");
-        for (Notebook notebook : notebookSet) {
-            System.out.println(notebook);
-        }
+
         return notebookSet;
     }
     /* public static HashMap<String, String[]> arrParams = new HashMap<>();

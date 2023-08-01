@@ -20,6 +20,10 @@ public class Main {
                 break;
             case ("1"):
                 Set<Notebook> notebooks = NoteCatalog.fill();
+                System.out.println("Ноутбуки в наличии: ");
+                for (Notebook notebook : notebooks) {
+                    System.out.println(notebook);
+                }
                 break;
             case ("2"):
                 // ***** notebookFromFilter = NoteCustomer.???();
