@@ -13,7 +13,7 @@ public class NoteCatalog {
     static String[] arrColor = {"black", "white", "red", "silver", "gold"};
     static int scroll2 = 2;
     static int scroll5 = 5;
-    static int totalNotebook = 12;
+    static int totalNotebook = 17;
 
     public static Set<Notebook> fill() {
         Set<Notebook> notebookSet = new HashSet<>();
@@ -25,21 +25,7 @@ public class NoteCatalog {
                     arrOs[randNumber.nextInt(scroll5)],
                     arrColor[randNumber.nextInt(scroll5)]));
         }
-
         return notebookSet;
     }
-    /* public static HashMap<String, String[]> arrParams = new HashMap<>();
-
-    public static HashMap<String, String[]> getArrParams() {
-        arrParams.put("Оперативная память", arrRam);
-        arrParams.put("Жестcкий диск", arrDrive);
-        arrParams.put("Размер экрана", arrScreenSize);
-        arrParams.put("Производитель", arrBrand);
-        arrParams.put("Операционная система", arrOs);
-        arrParams.put("Цвет", arrColor);
-        return arrParams;
-    }
-
-     */
 
 }
