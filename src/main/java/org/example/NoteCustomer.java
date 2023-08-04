@@ -8,7 +8,6 @@ public class NoteCustomer {
     public static Set<Notebook> filter(Set<Notebook> notebooks) {
         System.out.println("Выберите Операционную систему, введя первую букву навания");
         System.out.println("W = \"Windows\", U = \"Ubuntu\", F = \"Fedora\", C = \"Chrome OS\", S = \"Solaris\"");
-        System.out.println("или любой символ, если не имеет значения");
         Scanner scanner = new Scanner(System.in);
         String os = scanner.nextLine();
 

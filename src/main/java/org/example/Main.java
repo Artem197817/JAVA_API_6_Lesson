@@ -26,15 +26,14 @@ public class Main {
                 extracted(notebooks);
                 break;
             case ("2"):
-
                 Set<Notebook> notebookFromFilter = NoteCustomer.filter(notebooks);
                 int counter = notebookFromFilter.size();
                 if (counter == 0) {
                     System.out.println("Не найдено ни одного ноутбука");
                 } else {
-                    System.out.printf("Найдено %d из %d ноутбуков\n", counter, totalNotebook);
                     extracted(notebookFromFilter);
-                }
+                    System.out.printf("Найдено %d из %d ноутбуков\n", counter, totalNotebook);
+                 }
                 break;
             default:
                 System.out.println("Некорректный ввод");
@@ -42,6 +41,10 @@ public class Main {
         }
     }
 
+    /**
+     * @apiNote печатает список ноутбуков с параметрами
+     * @param notebooks список ноутбуков
+     */
     private static void extracted(Set<Notebook> notebooks) {
         for (Notebook notebook : notebooks) {
             System.out.println(notebook);
