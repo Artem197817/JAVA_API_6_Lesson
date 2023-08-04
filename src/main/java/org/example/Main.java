@@ -23,7 +23,8 @@ public class Main {
                 break;
             case ("1"):
                 System.out.println("Ноутбуки в наличии: ");
-                extracted(notebooks);
+                notebookPrint(notebooks);
+                System.out.printf("Найдено %d из %d ноутбуков\n", totalNotebook, totalNotebook);
                 break;
             case ("2"):
                 Set<Notebook> notebookFromFilter = NoteCustomer.filter(notebooks);
@@ -31,7 +32,7 @@ public class Main {
                 if (counter == 0) {
                     System.out.println("Не найдено ни одного ноутбука");
                 } else {
-                    extracted(notebookFromFilter);
+                    notebookPrint(notebookFromFilter);
                     System.out.printf("Найдено %d из %d ноутбуков\n", counter, totalNotebook);
                  }
                 break;
@@ -45,7 +46,7 @@ public class Main {
      * @apiNote печатает список ноутбуков с параметрами
      * @param notebooks список ноутбуков
      */
-    private static void extracted(Set<Notebook> notebooks) {
+    private static void notebookPrint(Set<Notebook> notebooks) {
         for (Notebook notebook : notebooks) {
             System.out.println(notebook);
         }
