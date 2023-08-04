@@ -19,27 +19,32 @@ public class Main {
 
         switch (choice) {
             case ("0"):
-                System.out.println("Досвидосики");
+                System.out.println("Досвидосики :)");
                 break;
             case ("1"):
                 System.out.println("Ноутбуки в наличии: ");
-                for (Notebook notebook : notebooks) {
-                    System.out.println(notebook);
-                }
+                extracted(notebooks);
                 break;
             case ("2"):
 
                 Set<Notebook> notebookFromFilter = NoteCustomer.filter(notebooks);
                 int counter = notebookFromFilter.size();
                 if (counter == 0) {
-                    System.out.println("Мы пока не научились писать код для фильтров... Но в скором времени напишем что-то подобное)))");
+                    System.out.println("Не найдено ни одного ноутбука");
                 } else {
                     System.out.printf("Найдено %d из %d ноутбуков\n", counter, totalNotebook);
+                    extracted(notebookFromFilter);
                 }
                 break;
             default:
                 System.out.println("Некорректный ввод");
                 break;
+        }
+    }
+
+    private static void extracted(Set<Notebook> notebooks) {
+        for (Notebook notebook : notebooks) {
+            System.out.println(notebook);
         }
     }
 }
