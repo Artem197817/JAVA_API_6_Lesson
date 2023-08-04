@@ -12,10 +12,10 @@ public class NoteCustomer {
         Scanner scanner = new Scanner(System.in);
         String os = scanner.nextLine();
 
-        System.out.println("Введите минимальное значение Оперативной памяти");
+        System.out.println("Введите минимальное значение Оперативной памяти [4 - 32]");
         int ram = scanner.nextInt();
 
-        System.out.println("Введите минимальное значение Размера экрана");
+        System.out.println("Введите минимальное значение Размера экрана [11 - 17]");
         double screenSize = scanner.nextDouble();
 
         Set<Notebook> notebookFromFilter = new HashSet<>();

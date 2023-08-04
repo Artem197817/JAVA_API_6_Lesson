@@ -13,7 +13,7 @@ public class NoteCatalog {
     static String[] arrColor = {"black", "white", "red", "silver", "gold"};
     static int scroll2 = 2;
     static int scroll5 = 5;
-    static int totalNotebook = 17;
+    static int totalNotebook = 170;
 
     public static Set<Notebook> fill() {
         Set<Notebook> notebookSet = new HashSet<>();
