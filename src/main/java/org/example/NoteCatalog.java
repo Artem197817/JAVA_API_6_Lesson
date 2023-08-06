@@ -14,7 +14,8 @@ public class NoteCatalog {
     static int totalNotebook = 170;
 
     /**
-     * @return
+     * @apiNote Создает список всех ноутбуков
+     * @return notebookSet собственно список
      */
     public static Set<Notebook> fill() {
         Set<Notebook> notebookSet = new HashSet<>();
@@ -30,9 +31,9 @@ public class NoteCatalog {
     }
 
     /**
-     *
-     * @param arr
-     * @return
+     * @apiNote Метод возвращает случайно выбранный элемент из массива строк
+     * @param arr массив строк
+     * @return элемент массива, выбранный случайным образом
      */
     private static String sample(String[] arr) {
         return arr[random.nextInt(arr.length)];
