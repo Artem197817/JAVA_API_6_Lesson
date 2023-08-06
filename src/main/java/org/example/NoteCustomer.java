@@ -16,10 +16,13 @@ public class NoteCustomer {
 
         System.out.println("Введите минимальное значение Размера экрана [11 - 17]");
         double screenSize = scanner.nextDouble();
+        scanner.close();
 
         Set<Notebook> notebookFromFilter = new HashSet<>();
         for (Notebook notebook : notebooks) {
-            if (ram <= notebook.getRam() && os.equalsIgnoreCase(String.valueOf(notebook.getOs().charAt(0))) && screenSize <= notebook.getScreenSize()) {
+            if (ram <= notebook.getRam()
+                    && os.equalsIgnoreCase(String.valueOf(notebook.getOs().charAt(0)))
+                    && screenSize <= notebook.getScreenSize()) {
                 notebookFromFilter.add(new Notebook(notebook.getRam(),
                         notebook.getDrive(),
                         notebook.getScreenSize(),
