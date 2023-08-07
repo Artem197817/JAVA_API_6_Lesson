@@ -11,7 +11,7 @@ public class NoteCatalog {
     static String[] arrBrand = {"Sony", "Lenovo", "Fujitsu", "HP", "Toshiba"};
     static String[] arrOs = {"Windows", "Ubuntu", "Fedora", "Chrome OS", "Solaris"};
     static String[] arrColor = {"black", "white", "red", "silver", "gold"};
-    static int totalNotebook = 170;
+    static int totalNotebook = 17;
 
     /**
      * @apiNote Создает список всех ноутбуков

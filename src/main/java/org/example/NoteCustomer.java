@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -12,10 +13,23 @@ public class NoteCustomer {
         String os = scanner.nextLine();
 
         System.out.println("Введите минимальное значение Оперативной памяти [4 - 32]");
-        int ram = scanner.nextInt();
+        int ram;
+        try {
+            ram = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            //System.out.println("exception caught int");
+            ram = 0;
+            scanner.nextLine();
+        }
 
         System.out.println("Введите минимальное значение Размера экрана [11 - 17]");
-        double screenSize = scanner.nextDouble();
+        double screenSize;
+        try {
+            screenSize = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            //System.out.println("exception caught double");
+            screenSize = 0.0;
+        }
         scanner.close();
 
         Set<Notebook> notebookFromFilter = new HashSet<>();
